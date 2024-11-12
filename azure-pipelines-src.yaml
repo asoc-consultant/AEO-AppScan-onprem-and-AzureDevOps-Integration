@@ -2,6 +2,7 @@ variables:
   aseApiKeyId: xxxxxxxxxxxxxxxx
   aseApiKeySecret: xxxxxxxxxxxxxxxx
   compiledArtifactFolder: none
+  sconlyArtifactFolder: none
   scanConfig: Normal scan
   aseAppName: $(Build.Repository.Name)
   aseHostname: xxxxxxxxxxxxxxxx
