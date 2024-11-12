@@ -20,7 +20,8 @@ if ($env:compiledArtifactFolder -ne "none"){
     write-host "There is a compiled files compressed in folder $env:compiledArtifactFolder."
     Expand-Archive -Path $content -DestinationPath $env:compiledArtifactFolder
   }else{
-    write-host "There is no compiled files compressed."
+    write-host "There is no compiled files compressed. Will use SC Only Artifact."
+    $env:compiledArtifactFolder == $env:sconlyArtifactFolder
   }
   write-output "login_file $env:aseHostname `"$env:aseToken`" -acceptssl" > script.scan
   write-output "of `"$env:WorkingDirectory\$env:compiledArtifactFolder`"" >> script.scan
